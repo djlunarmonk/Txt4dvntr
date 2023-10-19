@@ -25,8 +25,7 @@
 
             worldMap = new MapNode[9, 9];
             FileHandler.ReviveMap(ref worldMap);
-            MapMaker.RepopulateWorld(ref worldMap);
-
+            
             player = new Player(this);
             player.Y = 7;
             player.X = 4;
@@ -35,6 +34,8 @@
 
         public void RunGame()
         {
+            MapMaker.RepopulateWorld(ref worldMap);
+
             keepPlaying = true;
             _movement = true;
             do
@@ -73,73 +74,75 @@
 
                     switch (input[0])
                     {
-                        // debugging world setup
-                        case "mapview":
-                            for (int i = 0; i < worldMap.GetLength(0); i++)
-                            {
-                                for (int j = 0; j < worldMap.GetLength(1); j++)
-                                {
-                                    worldMap[j, i].Display();
-                                    Console.Write("\nAdd nesw:");
-                                    string add = Console.ReadLine().Trim();
-                                    Console.Write("\nRem nesw:");
-                                    string rem = Console.ReadLine().Trim();
+                        #region developer "tools"
+                    //     //debugging world setup
+                    //    case "mapview":
+                    //    for (int i = 0; i < worldMap.GetLength(0); i++)
+                    //    {
+                    //        for (int j = 0; j < worldMap.GetLength(1); j++)
+                    //        {
+                    //            worldMap[j, i].Display();
+                    //            Console.Write("\nAdd nesw:");
+                    //            string add = Console.ReadLine().Trim();
+                    //            Console.Write("\nRem nesw:");
+                    //            string rem = Console.ReadLine().Trim();
 
-                                    foreach (char c in add)
-                                    {
-                                        switch (c)
-                                        {
-                                            case 'n':
-                                                worldMap[j, i].Exits |= Exits.north; break;
-                                            case 'e':
-                                                worldMap[j, i].Exits |= Exits.east; break;
-                                            case 's':
-                                                worldMap[j, i].Exits |= Exits.south; break;
-                                            case 'w':
-                                                worldMap[j, i].Exits |= Exits.west; break;
-                                        }
-                                    }
-                                    foreach (char c in rem)
-                                    {
-                                        switch (c)
-                                        {
-                                            case 'n':
-                                                worldMap[j, i].Exits &= ~ Exits.north; break;
-                                            case 'e':
-                                                worldMap[j, i].Exits &= ~ Exits.east; break;
-                                            case 's':
-                                                worldMap[j, i].Exits &= ~ Exits.south; break;
-                                            case 'w':
-                                                worldMap[j, i].Exits &= ~ Exits.west; break;
-                                        }
-                                    }
+                    //            foreach (char c in add)
+                    //            {
+                    //                switch (c)
+                    //                {
+                    //                    case 'n':
+                    //                        worldMap[j, i].Exits |= Exits.north; break;
+                    //                    case 'e':
+                    //                        worldMap[j, i].Exits |= Exits.east; break;
+                    //                    case 's':
+                    //                        worldMap[j, i].Exits |= Exits.south; break;
+                    //                    case 'w':
+                    //                        worldMap[j, i].Exits |= Exits.west; break;
+                    //                }
+                    //            }
+                    //            foreach (char c in rem)
+                    //            {
+                    //                switch (c)
+                    //                {
+                    //                    case 'n':
+                    //                        worldMap[j, i].Exits &= ~Exits.north; break;
+                    //                    case 'e':
+                    //                        worldMap[j, i].Exits &= ~Exits.east; break;
+                    //                    case 's':
+                    //                        worldMap[j, i].Exits &= ~Exits.south; break;
+                    //                    case 'w':
+                    //                        worldMap[j, i].Exits &= ~Exits.west; break;
+                    //                }
+                    //            }
 
-                                }
-                            }
+                    //        }
+                    //    }
 
-                            break;
+                    //    break;
 
-                        case "teleport":
-                            if (input.Length == 3)
-                            {
-                                int xx, yy;
-                                if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
-                                {
-                                    if (yy >= 0 && yy < worldMap.GetLength(0) && xx >= 0 && xx < worldMap.GetLength(1))
-                                    {
-                                        player.Y = yy;
-                                        player.X = xx;
-                                        _movement = true;
-                                    }
-                                }
-                                else Print("Not like that.");
-                            }
-                            else Print("Not like that.");
+                    //case "teleport":
+                    //    if (input.Length == 3)
+                    //    {
+                    //        int xx, yy;
+                    //        if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
+                    //        {
+                    //            if (yy >= 0 && yy < worldMap.GetLength(0) && xx >= 0 && xx < worldMap.GetLength(1))
+                    //            {
+                    //                player.Y = yy;
+                    //                player.X = xx;
+                    //                _movement = true;
+                    //            }
+                    //        }
+                    //        else Print("Not like that.");
+                    //    }
+                    //    else Print("Not like that.");
 
-                            break;
+                    //   break;
+                    #endregion
 
-                        // Talking
-                        case "say":
+                    // Talking
+                    case "say":
                             Console.WriteLine($"You say: \"{userInput.Substring(4)}\"");
                             break;
 
@@ -208,19 +211,24 @@
                             else { Console.WriteLine($"{char.ToUpper(input[0][0])}{input[0].Substring(1)} what?"); break; }
 
 
-                            if (worldMap[player.Y, player.X].Inventory.Count == 0) { Print($"There's nothing in this room to {input[0]}"); }
+                            //if (worldMap[player.Y, player.X].Inventory.Count == 0) { Print($"There's nothing in this room to {input[0]}"); }
                             
                             bool container = false;
 
                             if (userInput.Contains("from") && input.Length > 4)
                             {
                                 items = worldMap[player.Y, player.X].Inventory.Where(t => (t.Handle.Equals(input[4]) && (t is Container))).ToList();
-                                container = true;
+                                if (items.Count == 1) container = true;
+                                else items = player.Inventory.Where(t => (t.Handle.Equals(input[4]) && (t is Container))).ToList();
+                                if (items.Count == 1) container = true;
+
                             }
                             else if (userInput.Contains("from") && input.Length > 3)
                             {
                                 items = worldMap[player.Y, player.X].Inventory.Where(t => (t.Handle.Equals(input[3]) && (t is Container))).ToList();
-                                container = true;
+                                if (items.Count == 1) container = true;
+                                else items = player.Inventory.Where(t => (t.Handle.Equals(input[3]) && (t is Container))).ToList();
+                                if (items.Count == 1) container = true;
                             }
                             else
                             {

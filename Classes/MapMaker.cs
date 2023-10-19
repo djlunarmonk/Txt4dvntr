@@ -114,8 +114,8 @@
                 Container coinTube = new Container("tube", "short metal tube", "short metal tube, not too heavy. You know the kind of thing you'd collect coins in, " +
                                                    "only it has no slit to insert said coins into. It did however have a lid in its rear end, but you lost it as it came off", "1", 1);
 
-                Container corpse = new Container("corpse", "rottening corpse", "thing no person in their right mind would think to be reality, " +
-                                                "but you can't argue with the omnious ominous stench of rottening meat. It's a bull's head on a rather large man's body. It's the rottening corpse, " +
+                Container corpse = new Container("corpse", "rotting corpse", "thing no person in their right mind would think to be reality, " +
+                                                "but you can't argue with the omnious ominous stench of stale meat. It's a bull's head on a rather large person's body. It's the rotting corpse, " +
                                                 "or carcass if you will, of a minotaur", "0", 2);
                 Thing coin = new Thing("coin", "silver coin", "coin made of well maybe not silver, but... It has cyrillic lettering, you can't read its value or even tell whether it's antique " +
                                         "or just somewhat old. It's not a Euro cent coin anyway. In some ancient myths they placed coins on the dead person's eyelids at funerals, something to " +
