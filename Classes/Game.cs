@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Txt4dvntr.Classes
+﻿namespace Txt4dvntr.Classes
 {
 
     public class Game
@@ -29,6 +22,7 @@ namespace Txt4dvntr.Classes
             //player.X = worldMap.GetLength(1) / 2;
 
             //worldMap = MapMaker.GetWorldMap(9, 9);
+
             worldMap = new MapNode[9, 9];
             FileHandler.ReviveMap(ref worldMap);
             MapMaker.RepopulateWorld(ref worldMap);
@@ -36,12 +30,6 @@ namespace Txt4dvntr.Classes
             player = new Player(this);
             player.Y = 7;
             player.X = 4;
-
-
-            // Testar att ta bort en väg här
-            //worldMap[player.Y, player.X].Exits &= ~Exits.north;
-            //worldMap[player.Y - 1, player.X].Exits &= ~Exits.south;
-
 
         }
 
@@ -131,9 +119,24 @@ namespace Txt4dvntr.Classes
 
                             break;
 
+                        case "teleport":
+                            if (input.Length == 3)
+                            {
+                                int xx, yy;
+                                if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
+                                {
+                                    if (yy > 0 && yy < worldMap.GetLength(0) && xx > 0 && xx < worldMap.GetLength(1))
+                                    {
+                                        player.Y = yy;
+                                        player.X = xx;
+                                        _movement = true;
+                                    }
+                                }
+                                else Print("Not like that.");
+                            }
+                            else Print("Not like that.");
 
-
-                    
+                            break;
 
                         // Talking
                         case "say":

@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.Design;
-using Txt4dvntr;
-
-namespace Txt4dvntr.Classes
+﻿namespace Txt4dvntr.Classes
 {
     public class MapNode
     {
@@ -59,9 +56,10 @@ namespace Txt4dvntr.Classes
         {
             _visits = 0;
         }
+
         public void OnFirstVisit()
         {
-            if (_startPoint) { Game.Print($"{BeforeAndAfter.StartupStory()} "); }
+            if (_startPoint) { Game.Print($"\n{BeforeAndAfter.StartupStory()}\n"); }
             Game.Print(FirstVisitInfo);
             // Console.WriteLine("This is your first visit here!");
         }
@@ -69,7 +67,7 @@ namespace Txt4dvntr.Classes
         public void Display()
         {
             string coordinates = $"({Convert.ToInt32(id.Substring(0, 2))}, {Convert.ToInt32(id.Substring(2))})"; 
-            string summary =  $"{Description} From here you can go {Exits}. ";
+            string summary =  $"\n{Description} From here you can go {Exits}. ";
 
             if (Inventory.Any())
             {

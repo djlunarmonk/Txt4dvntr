@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Txt4dvntr.Classes;
-using static System.Collections.Specialized.BitVector32;
+﻿using Txt4dvntr.Classes;
 
 namespace Txt4dvntr
 {
@@ -56,11 +49,12 @@ namespace Txt4dvntr
                 case "openTube":
                     if ((thing1 is Thing) && (thing2 is Thing))
                     {
-                        Program.game.player.Inventory.Remove(thing2);
                         Thing thing3 = Program.game.worldMap[0,0].Inventory.Where(t => t.Handle == "tube").FirstOrDefault();
                         if (thing3 is not null)
                         {
                             Game.Print($"A lid pops out of the {thing2.Handle} and rolls into a tiny crack.");
+                            Program.game.player.Inventory.Remove(thing2);
+                            Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Remove(thing2);
                             Program.game.player.Inventory.Add(thing3); 
                         }
                     }

@@ -8,8 +8,8 @@ namespace Txt4dvntr.Classes
         private static string projectName = @"Txt4dvntr\";
         private static int pos = dirName.IndexOf(projectName) + projectName.Length;
         private static string mapFilename = dirName.Substring(0, pos) + @"\Map01\WorldMap.txt";
-        private static string thingsFilename = dirName.Substring(0, pos) + @"\Map01\WorldlyThings.txt";
-        private static string playerFilename = dirName.Substring(0, pos) + @"\Map01\WorldPlayer.txt";
+        //private static string thingsFilename = dirName.Substring(0, pos) + @"\Map01\WorldlyThings.txt";
+        //private static string playerFilename = dirName.Substring(0, pos) + @"\Map01\WorldPlayer.txt";
 
         public static void SaveGame(ref MapNode[,] worldMap, ref Player player)
         {
@@ -19,22 +19,24 @@ namespace Txt4dvntr.Classes
                 foreach (MapNode node in worldMap) { writer.WriteLine(node.EuroSeparatedLine()); }
             }
 
-            // saving all things in the world
-            using (StreamWriter writer = new StreamWriter(thingsFilename))
-            {
-                foreach (MapNode node in worldMap)
-                {
-                    foreach (Thing thing in node.Inventory) { writer.WriteLine($"{node.ID()}{thing.EuroSeparatedLine()}"); }
-                }
-            }
+            #region unused for now: saving things and player
+            //// saving all things in the world
+            //using (StreamWriter writer = new StreamWriter(thingsFilename))
+            //{
+            //    foreach (MapNode node in worldMap)
+            //    {
+            //        foreach (Thing thing in node.Inventory) { writer.WriteLine($"{node.ID()}{thing.EuroSeparatedLine()}"); }
+            //    }
+            //}
 
-            // saving the players current info
-            using (StreamWriter writer = new StreamWriter(playerFilename))
-            {
-                writer.WriteLine(player.EuroSeparatedLine());
+            //// saving the players current info
+            //using (StreamWriter writer = new StreamWriter(playerFilename))
+            //{
+            //    writer.WriteLine(player.EuroSeparatedLine());
 
-                foreach (Thing thing in player.Inventory) { writer.WriteLine(thing.EuroSeparatedLine()); }
-            }
+            //    foreach (Thing thing in player.Inventory) { writer.WriteLine(thing.EuroSeparatedLine()); }
+            //}
+            #endregion
         }
 
         public static void ReviveMap(ref MapNode[,] worldMap)

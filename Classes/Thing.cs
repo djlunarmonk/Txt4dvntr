@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Txt4dvntr.Classes
+﻿namespace Txt4dvntr.Classes
 {
     [Flags]
     public enum Abilities

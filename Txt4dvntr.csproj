@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Classes\DisplayBuffer.cs" />
+    <Compile Remove="Classes\Repository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Map01\WorldlyThings.txt" />
+    <None Remove="Map01\WorldMap - kopia.txt" />
+    <None Remove="Map01\WorldPlayer.txt" />
+  </ItemGroup>
+
 </Project>

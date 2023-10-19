@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Txt4dvntr.Classes
+﻿namespace Txt4dvntr.Classes
 {
     public class Obstruction : Thing
     {
@@ -43,9 +37,8 @@ namespace Txt4dvntr.Classes
         public string Display()
         {
             string message = "";
-            message += $"A {ShortHand} is at the {_exit} exit, ";
-            message += _locked ? " " : "but no longer ";
-            message += "blocking your way. ";
+            message += $"To the {_exit} is a {ShortHand}";
+            message += _locked ? ". " : ", but it seems you can pass through now. ";
 
             return message;
         }
@@ -66,7 +59,7 @@ namespace Txt4dvntr.Classes
                     Program.game.worldMap[y, x-1].Exits |= Exits.east; break;
             }
             _locked = false;
-            Console.WriteLine($"{_onOpen} and you can now also go {_exit} from here.");
+            Game.Print($"\n{_onOpen}. \n");
         }
     }
 }

@@ -1,87 +1,83 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Txt4dvntr.Classes
+﻿namespace Txt4dvntr.Classes
 {
     public static class MapMaker
     {
-        public static MapNode[,] GetWorldMap(int xx, int yy)
-        {
-            MapNode[,] worldMap = new MapNode[yy, xx];
+        #region old map generator
+
+        //public static MapNode[,] GetWorldMap(int xx, int yy)
+        //{
+        //    MapNode[,] worldMap = new MapNode[yy, xx];
 
 
-            for (int x = 0; x < worldMap.GetLength(0); x++)
-            {
-                for (int y = 0; y < worldMap.GetLength(1); y++)
-                {
-                    // Making the id from current coordinates
-                    string id = $"{x.ToString("x2")}{y.ToString("x2")}";
+        //    for (int x = 0; x < worldMap.GetLength(0); x++)
+        //    {
+        //        for (int y = 0; y < worldMap.GetLength(1); y++)
+        //        {
+        //            // Making the id from current coordinates
+        //            string id = $"{x.ToString("x2")}{y.ToString("x2")}";
 
 
-                    // Making a generic description and switching on exits
-                    //string description = "This seems to be an outdoor labyrinth? At least it has high stone walls and no roofing. " +
-                    //                        "I guess it could be an art project as well. Time might tell, " +
-                    //                        "if you live that long. This place smells like death.";
-                    string description = "Outdoor labyrinth?";
+        //            // Making a generic description and switching on exits
+        //            //string description = "This seems to be an outdoor labyrinth? At least it has high stone walls and no roofing. " +
+        //            //                        "I guess it could be an art project as well. Time might tell, " +
+        //            //                        "if you live that long. This place smells like death.";
+        //            string description = "Outdoor labyrinth?";
 
-                    Exits exits = new Exits();
+        //            Exits exits = new Exits();
 
-                    switch (y)
-                    {
-                        case 0:
-                        case 8:
-                            exits |= Exits.nowhere;
-                            description = "This is the ocean. Sink or swim! ";
-                            break;
-                        case 1:
-                            if (x == 1 || x == 5 || x == 7) { exits |= Exits.south; if (x != 7) exits |= Exits.east; }
-                            if (x == 2 || x == 3 || x == 6 || x == 7) { exits |= Exits.west; }
-                            description += "Is it an ocean you hear to the north? ";
-                            break;
-                        case 7:
-                            if (y == 3 || y == 4) { exits |= Exits.north; }
-                            if (y != 3 && y != 7) { exits |= Exits.east; }
-                            if (y != 1 && y != 4) { exits |= Exits.west; }
-                            description += "You think you can hear an ocean to the south. ";
-                            break;
-                        default:
-                            exits |= Exits.south | Exits.north;
-                            break;
-                    }
+        //            switch (y)
+        //            {
+        //                case 0:
+        //                case 8:
+        //                    exits |= Exits.nowhere;
+        //                    description = "This is the ocean. Sink or swim! ";
+        //                    break;
+        //                case 1:
+        //                    if (x == 1 || x == 5 || x == 7) { exits |= Exits.south; if (x != 7) exits |= Exits.east; }
+        //                    if (x == 2 || x == 3 || x == 6 || x == 7) { exits |= Exits.west; }
+        //                    description += "Is it an ocean you hear to the north? ";
+        //                    break;
+        //                case 7:
+        //                    if (y == 3 || y == 4) { exits |= Exits.north; }
+        //                    if (y != 3 && y != 7) { exits |= Exits.east; }
+        //                    if (y != 1 && y != 4) { exits |= Exits.west; }
+        //                    description += "You think you can hear an ocean to the south. ";
+        //                    break;
+        //                default:
+        //                    exits |= Exits.south | Exits.north;
+        //                    break;
+        //            }
 
-                    switch (x)
-                    {
-                        case 0:
-                        case 8:
-                            exits |= Exits.nowhere;
-                            description = "This is the ocean. Sink or swim! ";
-                            break;
-                        case 1:
-                            if (y == 1 || y == 7) { exits |= Exits.east; }
-                            if (y != 1) exits |= Exits.north;
+        //            switch (x)
+        //            {
+        //                case 0:
+        //                case 8:
+        //                    exits |= Exits.nowhere;
+        //                    description = "This is the ocean. Sink or swim! ";
+        //                    break;
+        //                case 1:
+        //                    if (y == 1 || y == 7) { exits |= Exits.east; }
+        //                    if (y != 1) exits |= Exits.north;
 
-                            description += "This sounds like a west coast beach. Or being trapped in a bunker on the west coast.";
-                            break;
-                        case 7:
-                            if (y == 7) { exits |= Exits.west; }
-                            description += "Is it possible? Sounds like waves to the east. ";
-                            break;
-                        default:
-                            exits |= Exits.west | Exits.east;
-                            break;
-                    }
-                    List<Thing> inventory = new List<Thing>();
+        //                    description += "This sounds like a west coast beach. Or being trapped in a bunker on the west coast.";
+        //                    break;
+        //                case 7:
+        //                    if (y == 7) { exits |= Exits.west; }
+        //                    description += "Is it possible? Sounds like waves to the east. ";
+        //                    break;
+        //                default:
+        //                    exits |= Exits.west | Exits.east;
+        //                    break;
+        //            }
+        //            List<Thing> inventory = new List<Thing>();
 
-                    worldMap[y, x] = new MapNode(id, description, inventory, exits);
-                }
-            }
-            return worldMap;
-        }
+        //            worldMap[y, x] = new MapNode(id, description, inventory, exits);
+        //        }
+        //    }
+        //    return worldMap;
+        //}
+        #endregion
 
-            
         public static void RepopulateWorld(ref MapNode[,] worldMap)
         { 
 
@@ -92,8 +88,8 @@ namespace Txt4dvntr.Classes
             Thing key = worldMap[1, 4].Inventory.Where(t => t.Handle == "key").SingleOrDefault();
             if (key is not null)
             {
-                Container outerDoll = new Container("doll", "Russian doll", "wooden doll painted in beautiful, traditional decor", "1", 1);
-                Container innerDoll = new Container("doll", "smaller Russian doll", "small wooden doll painted in beautiful, traditional decor", "1", 1);
+                Container outerDoll = new Container("doll", "Russian doll", "wooden doll painted like an archaic Greek amphora, perhaps it's more accurate to call it a greek doll", "1", 1);
+                Container innerDoll = new Container("doll", "smaller Russian doll", "small wooden doll. It has a strong smell of laquer and it has a traditional decor painted with beautiful colours", "1", 1);
                 innerDoll.Inventory.Add(key);
                 InterActions.SetNew(key, door, "openObstruction");
                 worldMap[1, 4].Inventory.Remove(key);
@@ -102,7 +98,8 @@ namespace Txt4dvntr.Classes
             }
             
             Obstruction wall = new Obstruction("wall", "wall full of holes",
-                                                $"the person who made this wall was possibly the weakest link of a chain gang, there are a lot of holes. Sadly not big enough to crawl through though. ",
+                                                $"wall not so well made. The person who made this wall was possibly the weakest link of a chain gang, there are a lot of holes. " +
+                                                $"Sadly not big enough to crawl through though. Not like you could stick a crowbar into one of the holes and pry it open either",
                                                 "0", ref worldMap[2, 4], "A part of the wall falls as the dynamite explodes", Exits.north,
                                                 "dynamite", "what looks like a stick of dynamite", "stick which surface has a somewhat rough and papery feel to it, " +
                                                 "it smells funny (not haha-funny) and a rather short fuse sticks out one of its ends. ");
@@ -114,12 +111,12 @@ namespace Txt4dvntr.Classes
                                                    "only it has no slit to insert said coins into. It does however have a groove in its rear end, had you've had a large " +
                                                    "screwdriver on you, you could've tried manipulating it. ", "1");
 
-                Container coinTube = new Container("tube", "short metal tube", "short metal rod, not too heavy. Or possibly a tube? You know the kind of thing you'd collect coins in, " +
+                Container coinTube = new Container("tube", "short metal tube", "short metal tube, not too heavy. You know the kind of thing you'd collect coins in, " +
                                                    "only it has no slit to insert said coins into. It did however have a lid in its rear end, but you lost it as it came off. ", "1", 1);
 
                 Container corpse = new Container("corpse", "rottening corpse", "thing no person in their right mind would think to be reality, " +
-                                                "but you can't argue with the omnious stench of rottening meat. It's a bull's head on a rather large man's body. It's the rottening corpse, " +
-                                                "or carcass if you will, of a minotaur", "1", 2);
+                                                "but you can't argue with the omnious ominous stench of rottening meat. It's a bull's head on a rather large man's body. It's the rottening corpse, " +
+                                                "or carcass if you will, of a minotaur", "0", 2);
                 Thing coin = new Thing("coin", "silver coin", "coin made of well maybe not silver, but... It has cyrillic lettering, you can't read its value or even tell whether it's antique " +
                                         "or just somewhat old. It's not a Euro cent coin anyway. In some ancient myths they placed coins on the dead person's eyelids at funerals, something to " +
                                         "pay the ferryman with. Wonder if there were two coins on the minotaur? The other could have just sunk into the eye? Or someone else may have taken it. " +

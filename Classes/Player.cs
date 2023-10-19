@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-using System.Numerics;
-using Txt4dvntr.Classes;
+﻿using Txt4dvntr.Classes;
 
 namespace Txt4dvntr
 {
