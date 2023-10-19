@@ -1,0 +1,81 @@
+0000€0€This is the ocean. Sink or swim! €0€
+0100€0€This is the ocean. Sink or swim! This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€0€
+0200€0€This is the ocean. Sink or swim! €0€
+0300€0€This is the ocean. Sink or swim! €0€
+0400€1€This is the ocean. Sink or swim! €0€
+0500€0€This is the ocean. Sink or swim! €0€
+0600€0€This is the ocean. Sink or swim! €0€
+0700€0€This is the ocean. Sink or swim! Is it possible? Sounds like waves to the east. €0€
+0800€0€This is the ocean. Sink or swim! €0€
+0001€0€This is the ocean. Sink or swim! €0€
+0101€3€Outdoor labyrinth?Is it an ocean you hear to the north? This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100100€
+0201€3€Outdoor labyrinth?Is it an ocean you hear to the north? €10000100€
+0301€4€Outdoor labyrinth?Is it an ocean you hear to the north? €10000000€
+0401€5€Outdoor labyrinth?Is it an ocean you hear to the north? €0€
+0501€5€Outdoor labyrinth?Is it an ocean you hear to the north? €100100€
+0601€3€Outdoor labyrinth?Is it an ocean you hear to the north? €10000100€
+0701€2€Outdoor labyrinth?Is it an ocean you hear to the north? Is it possible? Sounds like waves to the east. €10100000€
+0801€0€This is the ocean. Sink or swim! €0€
+0002€0€This is the ocean. Sink or swim! €0€
+0102€2€Outdoor labyrinth?This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100001€
+0202€0€Outdoor labyrinth?€100100€
+0302€0€Outdoor labyrinth?€10000100€
+0402€0€Outdoor labyrinth?€10000100€
+0502€3€Outdoor labyrinth?€10000001€
+0602€1€Outdoor labyrinth?€100000€
+0702€2€Outdoor labyrinth?Is it possible? Sounds like waves to the east. €100001€
+0802€0€This is the ocean. Sink or swim! €0€
+0003€0€This is the ocean. Sink or swim! €0€
+0103€3€Outdoor labyrinth?This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100001€
+0203€0€Outdoor labyrinth?€100001€
+0303€0€Outdoor labyrinth?€100100€
+0403€0€Outdoor labyrinth?€10000100€
+0503€3€Outdoor labyrinth?€10000100€
+0603€1€Outdoor labyrinth?€10000001€
+0703€2€Outdoor labyrinth?Is it possible? Sounds like waves to the east. €100001€
+0803€0€This is the ocean. Sink or swim! €0€
+0004€0€This is the ocean. Sink or swim! €0€
+0104€2€Outdoor labyrinth?This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100001€
+0204€0€Outdoor labyrinth?€100001€
+0304€0€Outdoor labyrinth?€100001€
+0404€0€Outdoor labyrinth?€100100€
+0504€5€Outdoor labyrinth?€10100100€
+0604€0€Outdoor labyrinth?€10100000€
+0704€1€Outdoor labyrinth?Is it possible? Sounds like waves to the east. €100001€
+0804€0€This is the ocean. Sink or swim! €0€
+0005€0€This is the ocean. Sink or swim! €0€
+0105€2€Outdoor labyrinth?This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100001€
+0205€0€Outdoor labyrinth?€100101€
+0305€0€Outdoor labyrinth?€10100001€
+0405€0€Outdoor labyrinth?€100001€
+0505€2€Outdoor labyrinth?€1€
+0605€0€Outdoor labyrinth?€100001€
+0705€0€Outdoor labyrinth?Is it possible? Sounds like waves to the east. €100001€
+0805€0€This is the ocean. Sink or swim! €0€
+0006€0€This is the ocean. Sink or swim! €0€
+0106€2€Outdoor labyrinth?This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€100001€
+0206€0€Outdoor labyrinth?€101€
+0306€0€Outdoor labyrinth?€10100001€
+0406€0€Outdoor labyrinth?€101€
+0506€0€Outdoor labyrinth?€10100100€
+0606€0€Outdoor labyrinth?€10000001€
+0706€0€Outdoor labyrinth?Is it possible? Sounds like waves to the east. €100001€
+0806€0€This is the ocean. Sink or swim! €0€
+0007€0€This is the ocean. Sink or swim! €0€
+0107€2€Outdoor labyrinth?You think you can hear an ocean to the south. This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€101€
+0207€2€Outdoor labyrinth?You think you can hear an ocean to the south. €10000100€
+0307€3€Outdoor labyrinth?You think you can hear an ocean to the south. €10000001€
+0407€3€Outdoor labyrinth?You think you can hear an ocean to the south. €100€
+0507€2€Outdoor labyrinth?You think you can hear an ocean to the south. €10000101€
+0607€2€Outdoor labyrinth?You think you can hear an ocean to the south. €10000100€
+0707€1€Outdoor labyrinth?You think you can hear an ocean to the south. Is it possible? Sounds like waves to the east. €10000001€
+0807€0€This is the ocean. Sink or swim! €0€
+0008€0€This is the ocean. Sink or swim! €0€
+0108€0€This is the ocean. Sink or swim! This sounds like a west coast beach. Or being trapped in a bunker on the west coast.€0€
+0208€0€This is the ocean. Sink or swim! €0€
+0308€0€This is the ocean. Sink or swim! €0€
+0408€0€This is the ocean. Sink or swim! €0€
+0508€0€This is the ocean. Sink or swim! €0€
+0608€0€This is the ocean. Sink or swim! €0€
+0708€0€This is the ocean. Sink or swim! Is it possible? Sounds like waves to the east. €0€
+0808€0€This is the ocean. Sink or swim! €0€
