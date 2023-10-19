@@ -2,7 +2,7 @@
 0100€0€This is the ocean. Sink or swim!€0€
 0200€0€This is the ocean. Sink or swim! €0€
 0300€0€This is the ocean. Sink or swim! €0€
-0400€1€This is a stone paved landing for smaller boats. Seems like the natural place to enter (and exit) the labyrinth. Not much waves today, just barely ripples. Strange it all sounded so violent from the inside.€100000€You walk out and look around. As far as you can see the whole island(?) has high walls, the labyrinth IS the whole island. Was it ever a natural island or was the whole thing built?
+0400€0€This is a stone paved landing for smaller boats. Seems like the natural place to enter (and exit) the labyrinth. Not much waves today, just barely ripples. Strange it all sounded so violent from the inside.€0€You walk out and look around. As far as you can see the whole island(?) has high walls, the labyrinth IS the whole island. Was it ever a natural island or was the whole thing built?
 0500€0€This is the ocean. Sink or swim! €0€
 0600€0€This is the ocean. Sink or swim! €0€
 0700€0€This is the ocean. Sink or swim! Is it possible? Sounds like waves to the east. €0€
@@ -11,7 +11,7 @@
 0101€0€It really seems like this long alley is going to deadend abruptly up ahead to the east.€100100€
 0201€1€Haven't you been around pretty much all of this now? Is there still something to be found?€10000100€Is "deadend" really also a verb?
 0301€1€Dead end again. Why the big love for dead ends? How about a running track that circles the island instead. Because this really is an island. And you're stuck on it with only dead boring company.€10000000€
-0401€1€This is kind of a green patio, hemmed in between the same kind of high walls. Vines and lemon trees all around. That special citrus smell mixes with the salty ocean smell here. Such a delight compared to the carcass you encountered before.€100001€Wow, this looks fresh!
+0401€0€This is kind of a green patio, hemmed in between the same kind of high walls. Vines and lemon trees all around. That special citrus smell mixes with the salty ocean smell here. Such a delight compared to the carcass you encountered before.€0€Wow, this looks fresh!
 0501€0€More high stone walls. What can I say?€100100€
 0601€0€Stone walls. Stone walls. Stone paved ground.€10000100€
 0701€0€Outdoor labyrinth? Is it an ocean you hear to the north as well? Is it possible?€10100000€
@@ -20,7 +20,7 @@
 0102€0€Long stone corridor - is it still considered a corridor without a roof? - coming to a corner to the north. The sound of the ocean is now strong from both the west and the north.€100001€
 0202€0€Turning another paved corner. Cornerstones etc.€100100€
 0302€0€This really is a labyrinth! More stone walls and paved floor. Or should you call it a street?€10000100€And you were really starting to admire the craftsmanship that's on display here.
-0402€1€This place looks just a little more rough than everything else you've seen here so far.€10000101€And here are the HOLES that go with them!
+0402€0€This place looks just a little more rough than everything else you've seen here so far.€10000100€And here are the HOLES that go with them!
 0502€0€Now you know how many STONES it takes to fill the Royal Albert Hall... Would be more fun had it been a song by the Stones.€10000001€
 0602€1€Not another dead end. Not just another dead end. But still, a dead end.€100000€ANOTHER DEAD END!!!
 0702€0€Close to the end of a long stretch here.€100001€
