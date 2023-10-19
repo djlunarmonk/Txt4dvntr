@@ -15,6 +15,7 @@
   <ItemGroup>
     <None Remove="Map01\WorldlyThings.txt" />
     <None Remove="Map01\WorldMap - kopia.txt" />
+    <None Remove="Map01\WorldMap.zip" />
     <None Remove="Map01\WorldPlayer.txt" />
   </ItemGroup>
 
