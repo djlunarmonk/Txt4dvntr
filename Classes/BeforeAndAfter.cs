@@ -24,9 +24,9 @@
         }
         public static void After()
         {
-            Game.Print("\n >");
-            Thread.Sleep(10000);
-            Game.Print("\n\nHey, there is a boat here! It has fresh water and food, well salty crackers. You eat and set sail. You finished the game, congrats pal!");
+            Console.Write("\n\n> ");
+            Thread.Sleep(8000);
+            Game.Print("\n\nHey, there is a boat here! It has fresh water and food, well it's just salty crackers. You eat and set sail. You finished the game, congrats pal!");
         }
     }
 }

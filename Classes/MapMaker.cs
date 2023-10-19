@@ -101,7 +101,7 @@
                                                 $"wall not so well made. The person who made this wall was possibly the weakest link of a chain gang, there are a lot of holes. " +
                                                 $"Sadly not big enough to crawl through though. Not like you could stick a crowbar into one of the holes and pry it open either",
                                                 "0", ref worldMap[2, 4], "A part of the wall falls as the dynamite explodes", Exits.north,
-                                                "dynamite", "what looks like a stick of dynamite", "stick which surface has a somewhat rough and papery feel to it, " +
+                                                "dynamite", "stick that sort of resembles dynamite", "stick which surface has a somewhat rough and papery feel to it, " +
                                                 "it smells funny (not haha-funny) and a rather short fuse sticks out one of its ends. ");
 
             Thing dynamite = worldMap[2, 4].Inventory.Where(t => t.Handle == "dynamite").SingleOrDefault();
@@ -112,7 +112,7 @@
                                                    "screwdriver on you, you could've tried manipulating it. ", "1");
 
                 Container coinTube = new Container("tube", "short metal tube", "short metal tube, not too heavy. You know the kind of thing you'd collect coins in, " +
-                                                   "only it has no slit to insert said coins into. It did however have a lid in its rear end, but you lost it as it came off. ", "1", 1);
+                                                   "only it has no slit to insert said coins into. It did however have a lid in its rear end, but you lost it as it came off", "1", 1);
 
                 Container corpse = new Container("corpse", "rottening corpse", "thing no person in their right mind would think to be reality, " +
                                                 "but you can't argue with the omnious ominous stench of rottening meat. It's a bull's head on a rather large man's body. It's the rottening corpse, " +

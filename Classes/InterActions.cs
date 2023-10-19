@@ -41,6 +41,15 @@ namespace Txt4dvntr
                         if ((thing1 as Solution).id == (thing2 as Obstruction).id)
                         {
                             (thing2 as Obstruction).OnOpen();
+
+                            if (Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Contains(thing1))
+                            {
+                                Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Remove(thing1);
+                            }
+                            else
+                            {
+                                Program.game.player.Inventory.Remove(thing1);
+                            }
                         }
                     }
 
@@ -53,9 +62,17 @@ namespace Txt4dvntr
                         if (thing3 is not null)
                         {
                             Game.Print($"A lid pops out of the {thing2.Handle} and rolls into a tiny crack.");
-                            Program.game.player.Inventory.Remove(thing2);
-                            Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Remove(thing2);
-                            Program.game.player.Inventory.Add(thing3); 
+                            if (Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Contains(thing2))
+                            {
+                                Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Remove(thing2);
+                                Program.game.worldMap[Program.game.player.Y, Program.game.player.X].Inventory.Add(thing3);
+
+                            }
+                            else
+                            {
+                                Program.game.player.Inventory.Remove(thing2);
+                                Program.game.player.Inventory.Add(thing3);
+                            }
                         }
                     }
                     break;

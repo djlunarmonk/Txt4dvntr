@@ -125,7 +125,7 @@
                                 int xx, yy;
                                 if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
                                 {
-                                    if (yy > 0 && yy < worldMap.GetLength(0) && xx > 0 && xx < worldMap.GetLength(1))
+                                    if (yy >= 0 && yy < worldMap.GetLength(0) && xx >= 0 && xx < worldMap.GetLength(1))
                                     {
                                         player.Y = yy;
                                         player.X = xx;
@@ -294,7 +294,7 @@
                             if (!ok) { Console.WriteLine("Come again?"); }
                             break;
                     }
-                    if (ok) { Console.WriteLine("Ok."); }
+                    if (ok) { Console.WriteLine("Ok.\n"); }
                 }
             }
 
