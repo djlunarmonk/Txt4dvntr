@@ -102,14 +102,14 @@
                                                 $"Sadly not big enough to crawl through though. Not like you could stick a crowbar into one of the holes and pry it open either",
                                                 "0", ref worldMap[2, 4], "A part of the wall falls as the dynamite explodes", Exits.north,
                                                 "dynamite", "stick that sort of resembles dynamite", "stick which surface has a somewhat rough and papery feel to it, " +
-                                                "it smells funny (not haha-funny) and a rather short fuse sticks out one of its ends. ");
+                                                "it smells funny (not haha-funny) and a rather short fuse sticks out one of its ends");
 
             Thing dynamite = worldMap[2, 4].Inventory.Where(t => t.Handle == "dynamite").SingleOrDefault();
             if (dynamite is not null)
             {
                 Thing rod = new Thing("rod", "short metal rod", "short metal rod, not too heavy. Or possibly a tube? You know the kind of thing you'd collect coins in, " +
                                                    "only it has no slit to insert said coins into. It does however have a groove in its rear end, had you've had a large " +
-                                                   "screwdriver on you, you could've tried manipulating it. ", "1");
+                                                   "screwdriver on you, you could've tried manipulating it", "1");
 
                 Container coinTube = new Container("tube", "short metal tube", "short metal tube, not too heavy. You know the kind of thing you'd collect coins in, " +
                                                    "only it has no slit to insert said coins into. It did however have a lid in its rear end, but you lost it as it came off", "1", 1);
