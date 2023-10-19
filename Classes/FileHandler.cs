@@ -4,10 +4,10 @@ namespace Txt4dvntr.Classes
 {
     public static class FileHandler
     {
-        private static string dirName = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-        private static string projectName = @"Txt4dvntr\";
-        private static int pos = dirName.IndexOf(projectName) + projectName.Length;
-        private static string mapFilename = dirName.Substring(0, pos) + @"\Map01\WorldMap.txt";
+        //private static string dirName = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+        //private static string projectName = @"Txt4dvntr\";
+        //private static int pos = dirName.IndexOf(projectName) + projectName.Length;
+        private static string mapFilename = GetDirectoryPath() + @"\Map01\WorldMap.txt";
         //private static string thingsFilename = dirName.Substring(0, pos) + @"\Map01\WorldlyThings.txt";
         //private static string playerFilename = dirName.Substring(0, pos) + @"\Map01\WorldPlayer.txt";
 
@@ -39,6 +39,13 @@ namespace Txt4dvntr.Classes
             #endregion
         }
 
+        private static string GetDirectoryPath()
+        {
+            string testPath = Environment.CurrentDirectory;
+            int idx = testPath.IndexOf("bin");
+            return testPath.Substring(0, idx);
+
+        }
         public static void ReviveMap(ref MapNode[,] worldMap)
         {
             using (StreamReader reader = new StreamReader(mapFilename))
