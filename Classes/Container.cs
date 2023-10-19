@@ -13,9 +13,10 @@
 
         public override void Examine()
         {
-            string description = ($"It's a {Description}. It holds ");
+            string description = $"It's a {Description}. ";
             if ( Inventory.Count > 0 )
             {
+                description += "It holds ";
                 for (int i =0; i < Inventory.Count; i++)
                 {
                     description += $"a {Inventory[i].ShortHand}";
@@ -24,7 +25,7 @@
                     else { description += ", "; }
                 }
             }
-            else { description += $"nothing. "; }
+            else { description += $"The {Handle} is empty."; }
             Game.Print(description);
         }
 
