@@ -89,7 +89,7 @@
             if (key is not null)
             {
                 Container outerDoll = new Container("doll", "Russian doll", "wooden doll painted like an archaic Greek amphora, perhaps it's more accurate to call it a greek doll", "1", 1);
-                Container innerDoll = new Container("doll", "smaller Russian doll", "small wooden doll. It has a strong smell of laquer and it has a traditional decor painted with beautiful colours", "1", 1);
+                Container innerDoll = new Container("dolly", "smaller Russian dolly", "small wooden dolly. It has a strong smell of laquer and it has a traditional decor painted with beautiful colours", "1", 1);
                 innerDoll.Inventory.Add(key);
                 InterActions.SetNew(key, door, "openObstruction");
                 worldMap[1, 4].Inventory.Remove(key);
