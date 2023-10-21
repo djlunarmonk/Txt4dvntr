@@ -75,70 +75,40 @@
                     switch (input[0])
                     {
                         #region developer "tools"
-                        ////debugging world setup
-                        //case "mapview":
-                        //    for (int i = 0; i < worldMap.GetLength(0); i++)
-                        //    {
-                        //        for (int j = 0; j < worldMap.GetLength(1); j++)
-                        //        {
-                        //            worldMap[j, i].Display();
-                        //            Console.Write("\nAdd nesw:");
-                        //            string add = Console.ReadLine().Trim();
-                        //            Console.Write("\nRem nesw:");
-                        //            string rem = Console.ReadLine().Trim();
+                        //debugging world setup
+                        case "exitsall":
+                            for (int i = 0; i < worldMap.GetLength(0); i++)
+                            {
+                                for (int j = 0; j < worldMap.GetLength(1); j++)
+                                {
+                                EditExits(i,j);
+                                }
+                            }
+                            break;
+                        case "exitshere":
+                            EditExits(player.X, player.Y);
+                            worldMap[player.Y, player.X].Display();
+                            Print("Better?");
+                            break;
 
-                        //            foreach (char c in add)
-                        //            {
-                        //                switch (c)
-                        //                {
-                        //                    case 'n':
-                        //                        worldMap[j, i].Exits |= Exits.north; break;
-                        //                    case 'e':
-                        //                        worldMap[j, i].Exits |= Exits.east; break;
-                        //                    case 's':
-                        //                        worldMap[j, i].Exits |= Exits.south; break;
-                        //                    case 'w':
-                        //                        worldMap[j, i].Exits |= Exits.west; break;
-                        //                }
-                        //            }
-                        //            foreach (char c in rem)
-                        //            {
-                        //                switch (c)
-                        //                {
-                        //                    case 'n':
-                        //                        worldMap[j, i].Exits &= ~Exits.north; break;
-                        //                    case 'e':
-                        //                        worldMap[j, i].Exits &= ~Exits.east; break;
-                        //                    case 's':
-                        //                        worldMap[j, i].Exits &= ~Exits.south; break;
-                        //                    case 'w':
-                        //                        worldMap[j, i].Exits &= ~Exits.west; break;
-                        //                }
-                        //            }
+                        case "teleport":
+                            if (input.Length == 3)
+                            {
+                                int xx, yy;
+                                if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
+                                {
+                                    if (yy >= 0 && yy < worldMap.GetLength(0) && xx >= 0 && xx < worldMap.GetLength(1))
+                                    {
+                                        player.Y = yy;
+                                        player.X = xx;
+                                        _movement = true;
+                                    }
+                                }
+                                else Print("Not like that.");
+                            }
+                            else Print("Not like that.");
 
-                        //        }
-                        //    }
-
-                        //    break;
-
-                        //case "teleport":
-                        //    if (input.Length == 3)
-                        //    {
-                        //        int xx, yy;
-                        //        if (int.TryParse(input[1], out xx) && int.TryParse(input[2], out yy))
-                        //        {
-                        //            if (yy >= 0 && yy < worldMap.GetLength(0) && xx >= 0 && xx < worldMap.GetLength(1))
-                        //            {
-                        //                player.Y = yy;
-                        //                player.X = xx;
-                        //                _movement = true;
-                        //            }
-                        //        }
-                        //        else Print("Not like that.");
-                        //    }
-                        //    else Print("Not like that.");
-
-                        //    break;
+                            break;
                         #endregion
 
                         // Talking
@@ -344,6 +314,65 @@
                 
             }
             Console.WriteLine();
+        }
+
+        public void EditExits(int xx, int yy)
+        {
+            int i = xx;
+            int j = yy;
+            Console.Write("\nAdd exits: ");
+            string add = Console.ReadLine().Trim();
+            Console.Write("\nRemove exits:");
+            string rem = Console.ReadLine().Trim();
+
+            string[] choppedAdd = add.Split(" ");
+
+            foreach (string c in choppedAdd)
+            {
+                switch (c)
+                {
+                    case "n":
+                        worldMap[j, i].Exits |= Exits.north; break;
+                    case "ne":
+                        worldMap[j, i].Exits |= Exits.northeast; break;
+                    case "e":
+                        worldMap[j, i].Exits |= Exits.east; break;
+                    case "se":
+                        worldMap[j, i].Exits |= Exits.southeast; break;
+                    case "s":
+                        worldMap[j, i].Exits |= Exits.south; break;
+                    case "sw":
+                        worldMap[j, i].Exits |= Exits.southwest; break;
+                    case "w":
+                        worldMap[j, i].Exits |= Exits.west; break;
+                    case "nw":
+                        worldMap[j, i].Exits |= Exits.northwest; break;
+                }
+            }
+
+            string[] choppedRemove = rem.Split(" ");
+            foreach (string c in choppedRemove)
+            {
+                switch (c)
+                {
+                    case "n":
+                        worldMap[j, i].Exits &= ~Exits.north; break;
+                    case "ne":
+                        worldMap[j, i].Exits &= ~Exits.northeast; break;
+                    case "e":
+                        worldMap[j, i].Exits &= ~Exits.east; break;
+                    case "se":
+                        worldMap[j, i].Exits &= ~Exits.southeast; break;
+                    case "s":
+                        worldMap[j, i].Exits &= ~Exits.south; break;
+                    case "sw":
+                        worldMap[j, i].Exits &= ~Exits.southwest; break;
+                    case "w":
+                        worldMap[j, i].Exits &= ~Exits.west; break;
+                    case "nw":
+                        worldMap[j, i].Exits &= ~Exits.northwest; break;
+                }
+            }
         }
 
     }
