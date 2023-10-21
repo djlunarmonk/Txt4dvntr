@@ -124,10 +124,30 @@ namespace Txt4dvntr
                     }
                     else { wrongExit = true; }
                     break;
+                case "northeast":
+                case "ne":
+                    if (game.worldMap[Y, X].Exits.HasFlag(Exits.northeast))
+                    {
+                        Y--;
+                        X++;
+                        return true;
+                    }
+                    else { wrongExit = true; }
+                    break;
                 case "east":
                 case "e":
                     if (game.worldMap[Y, X].Exits.HasFlag(Exits.east))
                     {
+                        X++;
+                        return true;
+                    }
+                    else { wrongExit = true; }
+                    break;
+                case "southeast":
+                case "se":
+                    if (game.worldMap[Y, X].Exits.HasFlag(Exits.southeast))
+                    {
+                        Y++;
                         X++;
                         return true;
                     }
@@ -142,10 +162,30 @@ namespace Txt4dvntr
                     }
                     else { wrongExit = true; }
                     break;
+                case "southwest":
+                case "sw":
+                    if (game.worldMap[Y, X].Exits.HasFlag(Exits.southwest))
+                    {
+                        Y++;
+                        X--;
+                        return true;
+                    }
+                    else { wrongExit = true; }
+                    break;
                 case "west":
                 case "w":
                     if (game.worldMap[Y, X].Exits.HasFlag(Exits.west))
                     {
+                        X--;
+                        return true;
+                    }
+                    else { wrongExit = true; }
+                    break;
+                case "northwest":
+                case "nw":
+                    if (game.worldMap[Y, X].Exits.HasFlag(Exits.northwest))
+                    {
+                        Y--;
                         X--;
                         return true;
                     }
