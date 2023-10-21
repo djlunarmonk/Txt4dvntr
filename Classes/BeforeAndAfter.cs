@@ -20,7 +20,7 @@
 
         public static string StartReminder()
         {
-            return "This is where you woke up, right? Little stain there looks familiar.";
+            return "This is where you first woke up, right? Little stain there looks familiar.";
         }
         public static void After()
         {

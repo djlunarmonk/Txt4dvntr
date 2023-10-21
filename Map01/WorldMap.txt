@@ -39,25 +39,25 @@
 0204€0€A narrow "street" leading north from an open space.€100001€
 0304€0€Yet another dead end coming up? Make it a double!€100001€
 0404€0€You're standing in a yard with high stone walls all around. In the middle of the smelly yard is a smaller building, also made from stone.€100100€
-0504€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller building, also made from stone. It's entrance is just south of you, is that where the bad smell is coming from?€10100100€
+0504€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller building, also made from stone. It's entrance is just south of you, is that where the bad smell is coming from?€11101100€
 0604€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller stone building. The entrance is somewhat to the west. Sniff... Sniff...€10100000€Wow, what a gust of old garbage!
 0704€0€Stony walls and floor.€100001€
 0804€0€This is the ocean. Sink or swim! €0€
 0005€0€This is the ocean. Sink or swim! €0€
 0105€0€...€100001€If this is an island and you and the minotaur are the only present beings, the only present has-beens, does that mean you fought the minotaur? Did you come here to fight the minotaur or did you come here for treasure? Were you attacked by the minotaur and defended yourself with lethal violence? How? Maybe you just came here for a picnic and found him dead? Her? It?
-0205€2€This is the northwestern part of a larger square with some sort of pagan midsummer fallos in the center.€101101€
-0305€2€This is the northeast part of a larger square with some sort of pagan midsummer fallos in the center.€11100001€Were there ever parties here? Rites of passage? Fertility festivals?
-0405€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller building, also made from stone. Both the small house in the middle and the yards outer walls have murals, mosaics and cyrillic lettering saying "No loitering!" or whatever, it's all Greek to you.€100001€This place seems ancient, but at the same time well kept.
+0205€0€This is the northwestern part of a larger square with some sort of pagan midsummer fallos in the center.€101101€
+0305€0€This is the northeast part of a larger square with some sort of pagan midsummer fallos in the center.€11100001€Were there ever parties here? Rites of passage? Fertility festivals?
+0405€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller building, also made from stone. Both the small house in the middle and the yards outer walls have murals, mosaics and cyrillic lettering saying "No loitering!" or whatever, it's all Greek to you.€101011€This place seems ancient, but at the same time well kept.
 0505€0€This is a chamber of foreboding darkness, but luckily a part of the roof has come in and lets enough sunlight in for you to see fairly well. Once this was obviously someone's home. Even though the walls and the floor is all stone just like outside, it has furniture that actually seem like they were once really comfy in their haydays. And beautiful vases on piedestals. One has fallen and a flung mosaic of vase shard glazing sends reflections around the room like an antique disco ball.€1€You trip on a loose floor stone and stumble through the door. This is definitely the home of the reek, what could be causing it?
-0605€0€Really big yard. Both the small house in the middle and the yards outer walls have murals, mosaics and cyrillic lettering saying "No littering!" or whatever, it's all Greek to you.€100001€
+0605€0€Really big yard. Both the small house in the middle and the yards outer walls have murals, mosaics and cyrillic lettering saying "No littering!" or whatever, it's all Greek to you.€101100001€
 0705€0€Long alleyway, hall, whatever, stretching from the south to the north. Hopefully, unless you're going in the wrong direction.€100001€Oh wait! Minotaur... Don't say this is a labyrinth.
 0805€0€This is the ocean. Sink or swim! €0€
 0006€0€This is the ocean. Sink or swim! €0€
 0106€0€Another long hall. Nothing to see here.€100001€
-0206€2€This is the southwest part of a larger square with some sort of pagan midsummer fallos in the center.€111€
-0306€1€This is the southeast part of a larger square with some sort of pagan midsummer fallos in the center.€110100001€
+0206€0€This is the southwest part of a larger square with some sort of pagan midsummer fallos in the center.€111€
+0306€0€This is the southeast part of a larger square with some sort of pagan midsummer fallos in the center.€110100001€
 0406€0€You're in a yard with high stone walls all around. In the middle of the yard is a smaller building, also made from stone. You can't see its entrance. The smell is slightly stronger here.€101€Your steps echo slightly as you walk around.
-0506€0€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller stone building. It has no entrance facing this way, so you better walk around if you want to have a look inside.€10100100€There is something smelly around here.
+0506€1€You're standing in a yard with high stone walls all around. In the middle of the yard is a smaller stone building. It has no entrance facing this way, so you better walk around if you want to have a look inside.€110100110€There is something smelly around here.
 0606€0€Walking around the smaller stone building in the middle of the yard. The smell comes in bursts.€10000001€
 0706€0€Walking this alley somehow feels futile. €100001€
 0806€0€This is the ocean. Sink or swim! €0€
@@ -65,8 +65,8 @@
 0107€0€Oh yay! The sound of waves is also strong from the west and that could mean you're marooned on an island?€101€Turning the corner...
 0207€0€Wow, the ocean's sounds are really loud here when the walls are closer apart again.€10000100€
 0307€0€You're at the south entrance to a larger square. An alleyway leads west from here.€10000001€
-0407€1€This is kind of an odd place. It has high stone walls, yet it is a rather small area. In the center is some kind of narrow vertical gutter covered by a grate. Perhaps this is the back alley of some old castle? The inofficial privy, the secret latrine. Kinds of does smell like urine a little. Is there an exit?€100€
-0507€0€Something outside the high walls sound a little like waves. Is this near the ocean? Probably, all old castles were, no? Fastest way of transportation back then.€10000101€A foul odour breezes by you, coming from the north it seems.
+0407€2€This is kind of an odd place. It has high stone walls, yet it is a rather small area. In the center is some kind of narrow vertical gutter covered by a grate. Perhaps this is the back alley of some old castle? The inofficial privy, the secret latrine. Kinds of does smell like urine a little. Is there an exit?€100€
+0507€2€Something outside the high walls sound a little like waves. Is this near the ocean? Probably, all old castles were, no? Fastest way of transportation back then.€10000101€A foul odour breezes by you, coming from the north it seems.
 0607€0€You think you can hear an ocean to the south. €10000100€
 0707€0€A long corridor or narrow street, alley, stretches from the corner you just passed way up to the north.€10000001€What a long hall up ahead, big castle!
 0807€0€This is the ocean. Sink or swim! €0€

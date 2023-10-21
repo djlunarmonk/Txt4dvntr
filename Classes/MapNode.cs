@@ -66,8 +66,10 @@
 
         public void Display()
         {
-            string coordinates = $"({Convert.ToInt32(id.Substring(0, 2))}, {Convert.ToInt32(id.Substring(2))})"; 
-            string summary =  $"\n{Description} From here you can go {Exits}. ";
+            // string coordinates = $"({Convert.ToInt32(id.Substring(0, 2))}, {Convert.ToInt32(id.Substring(2))})"; 
+            string summary = $"\n{Description} ";
+            summary += _startPoint && _visits > 1 ? BeforeAndAfter.StartReminder() : "";
+            summary += $" From here you can go {Exits}. ";
 
             if (Inventory.Any())
             {
@@ -80,7 +82,6 @@
                         summary += (thing as Obstruction).Display();
                     }
                 }
-                if (_startPoint && _visits > 1) { summary += $" {BeforeAndAfter.StartReminder()} "; }
 
                 if (inventoryCount > 0)
                 {
