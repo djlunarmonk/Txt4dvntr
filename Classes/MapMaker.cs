@@ -131,7 +131,13 @@
                 worldMap[2, 4].Inventory.Remove(dynamite);
                 worldMap[0, 0].Inventory.Add(coinTube);
                 worldMap[2, 6].Inventory.Add(rod);
-            
+
+                // Making a marker
+                Marker spraycan = new Marker("spraycan", "can of spraypaint", "11", "graffiti", 5);
+
+                worldMap[7, 5].Inventory.Add(spraycan);
+
+
             }
 
 

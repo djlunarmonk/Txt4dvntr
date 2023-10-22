@@ -253,6 +253,14 @@
 
                             items = player.Inventory.Where(t => t.Handle == input[1]).ToList();
 
+                            // Using a marker
+                            if (items.Count == 1 && items[0] is Marker)
+                            {
+                                Marking marking = (items[0] as Marker).MarkThisPlace();
+                                if (marking is not null) { worldMap[player.Y, player.X].Inventory.Add(marking); }
+                            }
+
+                            // Using something on something else
                             if (input.Length > 3 && input[2] == "on")
                             {
                                 if (items.Count == 0)
@@ -271,6 +279,7 @@
                                 if (items.Count == 0) { items = worldMap[player.Y, player.X].Inventory.Where(t => t.Handle == input[1]).ToList(); }
                                 if (items.Count == 0) { Print($"There is no {input[1]} around to use. "); }
                             }
+                            
                             break;
 
                         default:
