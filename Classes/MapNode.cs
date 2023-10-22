@@ -82,6 +82,14 @@
                         summary += (thing as Obstruction).Display();
                     }
                 }
+                foreach (Thing thing in Inventory)
+                {
+                    if (thing is Marking)
+                    {
+                        inventoryCount--;
+                        summary += (thing as Marking).Display();
+                    }
+                }
 
                 if (inventoryCount > 0)
                 {
@@ -90,7 +98,7 @@
                     
                     while (counter < Inventory.Count)
                     {
-                        if (Inventory[counter] is not Obstruction)
+                        if (Inventory[counter] is not Obstruction && Inventory[counter] is not Marking)
                         {
                             summary += $"a {Inventory[counter].ShortHand}";
                             if (i == inventoryCount - 1) { summary += ". "; }
